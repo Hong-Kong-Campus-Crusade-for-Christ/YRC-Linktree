@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radical Rest | YRC 2026</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- RESET --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+        @font-face {
+            font-family: 'Hiatus';
+            src: url('assests/font/Hiatus.ttf'); 
+        }
+
+        @font-face {
+            font-family: 'Chinese Rocks';
+            src: url('assests/font/chinese\ rocks\ rg.otf'); 
+        }
+
+        /* --- BACKGROUND --- */
+        body {
+            font-family: 'Chinese Rocks', Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a; 
+            
+            /* Layer 1: Black Grunge */
+            background-image: url('assests/image/black-bg.png'); 
+            background-size: cover;
+            background-position: center;
+            
+            padding: 20px;
+        }
+
+        /* --- CONTAINER --- */
+        .phone-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            min-height: 90vh;
+            padding: 40px 25px;
+            text-align: center;
+            overflow: hidden; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* --- LAYER A: SOLID PURPLE (Opacity 1) --- */
+        .phone-container::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #ab9ce2; 
+            opacity: 1;
+            z-index: -2; 
+        }
+
+        /* --- LAYER B: TEXTURE OVERLAY (Opacity 0.3) --- */
+        .phone-container::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+
+            background-image: url('assests/image/texture.png'); 
+            background-size: cover;
+
+            opacity: 0.3; 
+            mix-blend-mode: normal;
+            z-index: -1;
+        }
+
+        /* --- PROFILE ICON --- */
+        .profile-img-container {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            /* box-shadow: 4px 4px 0px #000; */
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- TEXT --- */
+        h1 {
+            font-family: 'Hiatus', cursive, sans-serif;
+            font-size: 2.2rem;
+            color: #fff; 
+            line-height: 1.1;
+            margin-top: 10px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 0px #000; 
+        }
+
+        p.subtitle {
+            font-size: 1rem;
+            color: #ddd;
+            margin-bottom: 35px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* --- BUTTONS --- */
+        .links-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px; 
+            margin-bottom: 40px;
+        }
+
+        .link-btn {
+            display: block;
+            width: 100%;
+            padding: 18px 20px;
+            background-color: #fbb03b; 
+            color: #000;
+            text-decoration: none;
+            
+            /* Clean Font for buttons */
+            font-family: 'Chinese Rocks', Helvetica, Arial, sans-serif;
+            font-weight: 700; 
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            
+            border: 3px solid #000;
+            border-radius: 10px;
+            box-shadow: 5px 5px 0px #000; 
+            transition: all 0.15s ease;
+        }
+
+        .link-btn:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 7px 7px 0px #000;
+        }
+
+        .link-btn:active {
+            transform: translate(4px, 4px);
+            box-shadow: 1px 1px 0px #000;
+            background-color: #fff;
+        }
+
+        /* --- BOTTOM AREA --- */
+        .bottom-section {
+            margin-top: auto; 
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .company-socials {
+            display: flex;
+            gap: 25px;
+            font-size: 1.5rem;
+        }
+
+        .company-social-icon {
+            color: #fff; 
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .company-social-icon:hover {
+            color: #fbb03b;
+            transform: scale(1.15);
+        }
+
+        /* Logo Sizing */
+        .logo-container {
+            width: 150px; /* Adjust this width based on your logo shape */
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="phone-container">
+        
+        <div class="profile-img-container">
+            <img src="assests/image/YRC2026_icon.png" alt="Icon" class="profile-img">
+        </div>
+        
+        <h1>Radical Rest</h1>
+        <p class="subtitle">YRC 2026</p>
+
+        <div class="links-container">
+            <a href="https://linktr.ee/hkcccgsm" class="link-btn">Global Sending Movement</a>
+            
+            <a href="https://linktr.ee/bridgesHK" class="link-btn">Bridges International</a>
+            
+            <a href="https://drive.google.com/file/d/1JZVPtcXk9d9bIlhpKzWoB6KVH776cQlB/view?usp=sharing" class="link-btn">LDHR</a>
+            
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0gFQs7501_BcNbqKqheodtf4pfG_6e3o2vHG_2g-TyKNq3Q/viewform?usp=header" class="link-btn">Info-day Registration</a>
+            
+            <a href="https://www.hkccc.org/mfs" class="link-btn">MFS</a>
+            
+            <a href="https://linktr.ee/faithing.hk" class="link-btn">Faithing</a>
+
+            <a href="https://www.instagram.com/catteam_ccc?igsh=cXRuY2VubmoyeGh5" class="link-btn">CAT Team IG</a>
+            <a href="https://www.instagram.com/gamechangers.2026" class="link-btn">Game Changers IG</a>
+        </div>
+
+        <div class="bottom-section">
+            
+            <div class="company-socials">
+                <a href="https://www.facebook.com/CCCHK/" class="company-social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/hkccc_ig/" class="company-social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.hkccc.org" class="company-social-icon"><i class="fas fa-globe"></i></a>
+            </div>
+
+            <div class="logo-container">
+                <img src="assests/image/HKCCC Logo RGB Standard Full Color White Text.png" alt="Company Logo" class="logo-img">
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
